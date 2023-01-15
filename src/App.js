@@ -109,8 +109,6 @@ function App() {
 	function handleSubmit(event) {
 		event.preventDefault();
 
-		let success;
-
 		const data = querystring.stringify({
 			name: name.current.value,
 			email: email.current.value,
@@ -125,22 +123,14 @@ function App() {
 				name.current.value = '';
 				email.current.value = '';
 				message.current.value = '';
-
-				success = true;
+				document.querySelector('#submitBtn').innerHTML = 'Sent!';
+				document.querySelector('#submitBtn').style.backgroundColor = 'lightgreen';
 			})
 			.catch((err) => {
 				console.log('AXIOS ERROR ', err);
-
-				success = false;
+				document.querySelector('#submitBtn').innerHTML = 'Not sent!';
+				document.querySelector('#submitBtn').style.backgroundColor = 'pink';
 			});
-
-		if (success) {
-			document.querySelector('#submitBtn').innerHTML = 'Sent!';
-			document.querySelector('#submitBtn').style.backgroundColor = 'lightgreen';
-		} else {
-			document.querySelector('#submitBtn').innerHTML = 'Not sent!';
-			document.querySelector('#submitBtn').style.backgroundColor = 'pink';
-		}
 
 		setInterval(() => {
 			document.querySelector('#submitBtn').innerHTML = 'Send';
