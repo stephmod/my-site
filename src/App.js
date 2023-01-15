@@ -192,7 +192,7 @@ function App() {
 						I'd love to hear from you. Have a cool idea you want my help with? I'm always interested in
 						learning about new and exciting projects.
 					</p>
-					<form name="contact" className="flex flex-col" netlify>
+					<form name="contact" method="POST" className="flex flex-col" netlify>
 						<input
 							placeholder="Your name"
 							className="border border-black rounded-md mt-8 py-2 px-4 font-inter"
