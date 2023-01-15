@@ -85,16 +85,6 @@ const Sphere = () => {
 };
 
 function App() {
-	function didSubmit() {
-		document.querySelector('#submitBtn').innerHTML = 'Sent!';
-
-		setInterval(() => {
-			document.querySelector('#submitBtn').innerHTML = 'Send';
-		}, 2000);
-
-		clearInterval();
-	}
-
 	const cards = [
 		{
 			title: 'AI and machine learning',
@@ -202,13 +192,7 @@ function App() {
 						I'd love to hear from you. Have a cool idea you want my help with? I'm always interested in
 						learning about new and exciting projects.
 					</p>
-					<form
-						name="contact"
-						method="POST"
-						data-netlify="true"
-						className="flex flex-col"
-						onSubmit={didSubmit}
-					>
+					<form name="contact" className="flex flex-col" netlify>
 						<input
 							placeholder="Your name"
 							className="border border-black rounded-md mt-8 py-2 px-4 font-inter"
