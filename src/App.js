@@ -11,6 +11,8 @@ import {
 } from '@react-three/drei';
 import { useRef, useMemo } from 'react';
 import * as THREE from 'three';
+import querystring from 'querystring';
+import axios from 'axios';
 
 const Block = () => {
 	const data = useMemo(
@@ -85,6 +87,10 @@ const Sphere = () => {
 };
 
 function App() {
+	const name = useRef();
+	const email = useRef();
+	const message = useRef();
+
 	const cards = [
 		{
 			title: 'AI and machine learning',
@@ -99,6 +105,39 @@ function App() {
 			description: 'Know patent troll portfolios and litigation histories better than they do.',
 		},
 	];
+
+	function handleSubmit(event) {
+		event.preventDefault();
+
+		const data = querystring.stringify({
+			name: name.current,
+			email: email.current,
+			message: message.current,
+			'form-name': 'contact',
+		});
+
+		axios
+			.post('/', data)
+			.then((response) => {
+				console.log('AXIOS RESPONSE ', response);
+				name.current = '';
+				email.current = '';
+				message.current = '';
+			})
+			.catch((err) => {
+				console.log('AXIOS ERROR ', err);
+			});
+
+		document.querySelector('#submitBtn').innerHTML = 'Sent!';
+		document.querySelector('#submitBtn').style.backgroundColor = 'lightgreen';
+
+		setInterval(() => {
+			document.querySelector('#submitBtn').innerHTML = 'Send';
+			document.querySelector('#submitBtn').style.backgroundColor = '#FDD840';
+		}, 3000);
+
+		clearInterval();
+	}
 
 	return (
 		<div id="home" className="App">
@@ -192,13 +231,14 @@ function App() {
 						I'd love to hear from you. Have a cool idea you want my help with? I'm always interested in
 						learning about new and exciting projects.
 					</p>
-					<form name="contact" method="POST" className="flex flex-col" netlify>
+					<form name="contact" className="flex flex-col">
 						<input
 							placeholder="Your name"
 							className="border border-black rounded-md mt-8 py-2 px-4 font-inter"
 							required={true}
 							name="name"
 							type="text"
+							ref={name}
 						/>
 						<input
 							placeholder="Your email"
@@ -206,6 +246,7 @@ function App() {
 							required={true}
 							name="email"
 							type="email"
+							ref={email}
 						/>
 						<textarea
 							placeholder="Message"
@@ -213,11 +254,13 @@ function App() {
 							required={true}
 							name="message"
 							type="text"
+							ref={message}
 						/>
 						<button
 							id="submitBtn"
 							type="submit"
 							className="border border-black rounded-md w-32 mt-8 p-2 bg-[#FDD840] font-inter drop-shadow-[5px_5px_0px_#18181b] hover:bg-yellow-100"
+							onClick={handleSubmit}
 						>
 							Send
 						</button>
