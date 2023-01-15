@@ -109,10 +109,12 @@ function App() {
 	function handleSubmit(event) {
 		event.preventDefault();
 
+		let success;
+
 		const data = querystring.stringify({
-			name: name.current,
-			email: email.current,
-			message: message.current,
+			name: name.current.value,
+			email: email.current.value,
+			message: message.current.value,
 			'form-name': 'contact',
 		});
 
@@ -120,16 +122,25 @@ function App() {
 			.post('/', data)
 			.then((response) => {
 				console.log('AXIOS RESPONSE ', response);
-				name.current = '';
-				email.current = '';
-				message.current = '';
+				name.current.value = '';
+				email.current.value = '';
+				message.current.value = '';
+
+				success = true;
 			})
 			.catch((err) => {
 				console.log('AXIOS ERROR ', err);
+
+				success = false;
 			});
 
-		document.querySelector('#submitBtn').innerHTML = 'Sent!';
-		document.querySelector('#submitBtn').style.backgroundColor = 'lightgreen';
+		if (success) {
+			document.querySelector('#submitBtn').innerHTML = 'Sent!';
+			document.querySelector('#submitBtn').style.backgroundColor = 'lightgreen';
+		} else {
+			document.querySelector('#submitBtn').innerHTML = 'Not sent!';
+			document.querySelector('#submitBtn').style.backgroundColor = 'pink';
+		}
 
 		setInterval(() => {
 			document.querySelector('#submitBtn').innerHTML = 'Send';
@@ -231,7 +242,7 @@ function App() {
 						I'd love to hear from you. Have a cool idea you want my help with? I'm always interested in
 						learning about new and exciting projects.
 					</p>
-					<form name="contact" className="flex flex-col">
+					<form name="contact" className="flex flex-col" onSubmit={handleSubmit}>
 						<input
 							placeholder="Your name"
 							className="border border-black rounded-md mt-8 py-2 px-4 font-inter"
@@ -260,7 +271,6 @@ function App() {
 							id="submitBtn"
 							type="submit"
 							className="border border-black rounded-md w-32 mt-8 p-2 bg-[#FDD840] font-inter drop-shadow-[5px_5px_0px_#18181b] hover:bg-yellow-100"
-							onClick={handleSubmit}
 						>
 							Send
 						</button>
