@@ -99,7 +99,7 @@ function App() {
 		},
 		{
 			title: 'payments and web3',
-			description: 'Discover insights from payment rails and blockchains, and communicate visually.',
+			description: 'Discover insights from payments and blockchains, and communicate visually.',
 		},
 		{
 			title: 'patents and litigation',
@@ -170,7 +170,7 @@ function App() {
 							className="flex flex-col basis-1/4 min-w-[88vw] md:min-w-[390px] border border-black p-8 sm:p-10 rounded-md bg-white drop-shadow-[5px_5px_0px_#18181b]"
 						>
 							<h3 className="font-unbound font-medium text-lg md:text-xl">{card.title}</h3>
-							<p className="font-inter pt-2 text-md md:text-base">{card.description}</p>
+							<p className="font-inter pt-2 text-base">{card.description}</p>
 						</div>
 					))}
 				</div>
@@ -186,12 +186,12 @@ function App() {
 			<div id="about" className="grid lg:grid-cols-2 scroll-mt-10">
 				<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-b lg:border-b-0 border-black">
 					<h3 className="font-unbound lowercase font-medium text-xl">About me</h3>
-					<p className="font-inter pt-2 text-md sm:text-base">
+					<p className="font-inter pt-2 text-base">
 						I'm a Staff Design Engineer on the Data Experience team at Visa, and specialize in the
 						visualization of complex data systems like AI and machine learning, payments and web3, and
 						patents and litigation.
 					</p>
-					<p className="font-inter pt-2 text-md sm:text-base">
+					<p className="font-inter pt-2 text-base">
 						Before Visa, I spent several years working in San Francisco as a data analyst turned data
 						scientist turned software engineer, focused on data analysis tooling and interactive
 						visualization applications.
@@ -230,7 +230,7 @@ function App() {
 					className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-t lg:border-t-0 border-black scroll-mt-10"
 				>
 					<h3 className="font-unbound lowercase font-medium text-xl">Contact me</h3>
-					<p className="font-inter pt-2 text-md sm:text-base">
+					<p className="font-inter pt-2 text-base">
 						I'd love to hear from you. Have a cool idea you want my help with? I'm always interested in
 						learning about new and exciting projects.
 					</p>
