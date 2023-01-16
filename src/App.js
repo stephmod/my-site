@@ -95,7 +95,7 @@ function App() {
 	const cards = [
 		{
 			title: 'AI and machine learning',
-			description: 'Better understand your models and monitor performance in production.',
+			description: 'Better understand ML models and monitor performance in production.',
 		},
 		{
 			title: 'payments and web3',
@@ -187,14 +187,14 @@ function App() {
 				<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-b lg:border-b-0 border-black">
 					<h3 className="font-unbound lowercase font-medium text-xl">About me</h3>
 					<p className="font-inter pt-2 text-base">
-						I'm a Staff Design Engineer on the Data Experience team at Visa, and specialize in the
+						I'm a Staff Design Engineer on the Data Experience team at Visa. I specialize in the
 						visualization of complex data systems like AI and machine learning, payments and web3, and
 						patents and litigation.
 					</p>
 					<p className="font-inter pt-2 text-base">
-						Before Visa, I spent several years working in San Francisco as a data analyst turned data
-						scientist turned software engineer, focused on data analysis tooling and interactive
-						visualization applications.
+						Previously, I spent several years in San Francisco working as a data analyst turned data
+						scientist turned software engineer, focused on developing data visualization applications for
+						the world's best technology companies.
 					</p>
 					<div className="flex flex-row gap-5">
 						<a href="https://www.linkedin.com/in/smodica" target="_blank" rel="noreferrer">
