@@ -32,6 +32,7 @@ const Block = () => {
 
 	return (
 		<Float>
+			<pointLight args={[10, 10, 10]} color={'#eaeaea'} />
 			<mesh key={`block`} position={[0, 0, 0]}>
 				<RoundedBox args={[2.2, 2.2, 2.2]}>
 					<MeshTransmissionMaterial
@@ -45,7 +46,7 @@ const Block = () => {
 			</mesh>
 			<Instances key={`spheres`}>
 				<sphereGeometry args={[0.1, 64, 64]} />
-				<meshBasicMaterial />
+				<meshStandardMaterial />
 				{data.map((d, i) => (
 					<Instance
 						key={`sphere_${i}`}
@@ -206,7 +207,6 @@ function App() {
 				<div className="bg-[#eaeaea] border-l border-black flex flex-col place-content-center sm:h-[95vh] h-[70vh]">
 					<Canvas camera={{ position: [-4, 4, 8], fov: 30 }}>
 						<OrbitControls enableZoom={false} />
-						<ambientLight intensity={1} />
 						<Block key={`block0`} />
 					</Canvas>
 				</div>
@@ -218,15 +218,17 @@ function App() {
 				</h3>
 				<p className="font-inter font-light uppercase">MGMT. design</p>
 			</div>
-			<div id="contact" className="grid lg:grid-cols-2 scroll-mt-10">
+			<div className="grid lg:grid-cols-2">
 				<div className="bg-[#eaeaea] border-r border-black flex flex-col place-content-center lg:h-[95vh] h-[70vh]">
 					<Canvas camera={{ position: [-4, 4, 8], fov: 30 }}>
 						<OrbitControls enableZoom={false} />
-						<ambientLight intensity={1} />
 						<Sphere key={`sphere0`} />
 					</Canvas>
 				</div>
-				<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-t lg:border-t-0 border-black">
+				<div
+					id="contact"
+					className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-t lg:border-t-0 border-black scroll-mt-10"
+				>
 					<h3 className="font-unbound lowercase font-medium text-xl">Contact me</h3>
 					<p className="font-inter pt-2 text-md sm:text-base">
 						I'd love to hear from you. Have a cool idea you want my help with? I'm always interested in
