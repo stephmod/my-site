@@ -95,15 +95,15 @@ function App() {
 	const cards = [
 		{
 			title: 'AI and machine learning',
-			description: 'Better understand ML models and monitor performance in production.',
+			description: 'Better understand sophisticated models and monitor performance in production',
 		},
 		{
 			title: 'payments and web3',
-			description: 'Discover insights from payments and blockchains, and communicate visually.',
+			description: 'Discover insights from payment rails and explore blockchain data more tangibly',
 		},
 		{
 			title: 'patents and litigation',
-			description: 'Know patent troll portfolios and litigation histories better than they do.',
+			description: 'Uncover the portfolios and histories of patent trolls and alternative investments',
 		},
 	];
 
@@ -187,14 +187,14 @@ function App() {
 				<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-b lg:border-b-0 border-black">
 					<h3 className="font-unbound lowercase font-medium text-xl">About me</h3>
 					<p className="font-inter pt-2 text-base">
-						I'm a Staff Design Engineer on the Data Experience team at Visa. I specialize in the
+						I am a Staff Design Engineer on the Data Experience team at Visa. I specialize in the
 						visualization of complex data systems like AI and machine learning, payments and web3, and
 						patents and litigation.
 					</p>
 					<p className="font-inter pt-2 text-base">
-						Previously, I spent several years in San Francisco working as a data analyst turned data
-						scientist turned software engineer, focused on developing data visualization applications for
-						the world's best technology companies.
+						After several years working in San Francisco at the intersection of IP law and technology, I now
+						live in Miami and am focused on the data visualization and product design of AI/ML platforms and
+						blockchains.
 					</p>
 					<div className="flex flex-row gap-5">
 						<a href="https://www.linkedin.com/in/smodica" target="_blank" rel="noreferrer">
@@ -230,10 +230,10 @@ function App() {
 					className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-t lg:border-t-0 border-black scroll-mt-10"
 				>
 					<h3 className="font-unbound lowercase font-medium text-xl">Contact me</h3>
-					<p className="font-inter pt-2 text-base">
+					{/* <p className="font-inter pt-2 text-base">
 						I'd love to hear from you. Have a cool idea you want my help with? I'm always interested in
 						learning about new and exciting projects.
-					</p>
+					</p> */}
 					<form name="contact" className="flex flex-col" onSubmit={handleSubmit}>
 						<input
 							placeholder="Your name"
