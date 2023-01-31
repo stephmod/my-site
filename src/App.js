@@ -99,11 +99,11 @@ function App() {
 		},
 		{
 			title: 'payments and web3',
-			description: 'Discover insights from payment rails and explore blockchain data more tangibly',
+			description: 'Discover insights from payment rails and blockchains through sensory experience',
 		},
 		{
 			title: 'patents and litigation',
-			description: 'Uncover the portfolios and histories of patent trolls and alternative investments',
+			description: 'Uncover portfolios and litigations of patent trolls and alt investment vehicles',
 		},
 	];
 
@@ -177,9 +177,10 @@ function App() {
 			</div>
 			<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[50vh] border-b border-black">
 				<h3 className="text-2xl sm:text-4xl leading-tight tracking-tight font-unbound font-light">
-					"What we need is <span className="font-bold">not more information</span> but the ability to present{' '}
-					<span className="font-bold">the right information</span> to the right people at the right time, in
-					the most <span className="font-bold">effective and efficient</span> form."
+					"What we need is <span className="font-bold underline">not more information</span> but the ability
+					to present <span className="font-bold underline">the right information</span> to the right people at
+					the right time, in the most <span className="font-bold underline">effective and efficient</span>{' '}
+					form."
 				</h3>
 				<p className="font-inter font-light uppercase">Robert E. Horn</p>
 			</div>
@@ -213,8 +214,9 @@ function App() {
 			</div>
 			<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[50vh] border-b border-t border-black">
 				<h3 className="text-2xl sm:text-4xl leading-tight tracking-tight font-unbound font-light">
-					"What we like most is <span className="font-bold">translating complex information</span> into{' '}
-					<span className="font-bold">visually effective and intelligent</span> design solutions."
+					"What we like most is <span className="font-bold underline">translating complex information</span>{' '}
+					into visually <span className="font-bold underline">effective and intelligent</span> design
+					solutions."
 				</h3>
 				<p className="font-inter font-light uppercase">MGMT. design</p>
 			</div>
