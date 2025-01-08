@@ -148,10 +148,20 @@ function App() {
 					<h3 className="font-unbound font-medium text-lg sm:text-xl">Stephanie Modica</h3>
 				</a>
 				<div className="flex flex-row items-center justify-end gap-10">
-					<a href="#about">
+					<a href="#about" className="hidden sm:block">
 						<p className="font-inter text-md sm:text-lg">About</p>
 					</a>
-					<a href="#contact">
+					<a href="https://www.figma.com/board/moYtwSNfqVwn9wE6QRANRq/Portfolio" target="_blank" rel="noreferrer">
+						<p className="font-inter text-md sm:text-lg">resume + portfolio</p>
+					</a>
+					{/* <a
+						target="_blank"
+						href="https://ff8add042b815782ca7c1565b2e65310e9c4ff4200f1abb3951503c-apidata.googleusercontent.com/download/storage/v1/b/dependable-aloe/o/smodica-resume-030923.pdf?jk=AahUMlsjrOS0JOfVSFss0S9gP8qZYp3tVl4TK5epKq9aJedApx3Wu1A308Pob8nwCNQSuVE55iddTON_GRLlRm-2onVc0iuFezDZWOCq2Xerqjegvl8wE-ffeBuBKZDRaeu3oaIIw4Cu_m29sB2tX2Q_etxx2mKNnWGNZOhUMWsDh1eU0AtPNT-2gDBjiETBSOR3RIfmyQZta3n3Y8gO-xSwUnie4PxZEvquQD6kwJ8IOyLJX0grha8mQq8qyu_e60JHLVUbxsD1zaT9f--3k2c_OaeM4ve3KNrQfGIm5I0Vpv3XpQMKb9_E-x4nwE2D1x--0d6LUqTGh0o69KeGrIqr0lkA_IdKaYY1InMrao1rDgGARknnmr4nlSU1f6jd5UnoOQc-R8wG7VVpnYyCnLxaPc2-rgi2HHkZ7dZ3qf6rq0TBuMQxTyOWI92DU3sVTsxdqdRTz-VdeUqc55l6SAlNZ5-zisvbfqMOl-dlS8CpDEH8Fh5dq0nMZyEIRFggybthNH4XaadOznd_0mTW5r83zWNt0mOmp2XDVXA-rPsMkcaZSDWH_096tLGVkMxex74Pb7Iww27DdLAMoagSLGSNXUT3DQvIyBE3BiypfHC_HpJwjZIiKM5NHM534er5awN2w2oIk2cDZ3tosNpJiY_4v08Pb0s_ss9F4ZDoN42rhk8G5qhNxTTER0Hrt0xX1D35tHK6n6AP-dy6xZfXX2P1Im6AU1oliJAL0u98AJmmY4gvvs_PW-la9dMRe6zro30GFZpMRFDx5QqwYDCI-D20ygwRppRh_P4-atg6ZbA5SIFi_K6cPEm4kELLTMY9F2Nj1WwXjr_8pPFefZNxDODvJDhZqgrYoGWvK5PYMbgxpKCf35Fa0QoacR0q6rWcqgIWZkEJ9XMqibsLNJ6OGEG0-oSwUrVmsrRO6cgVhNsXvplw21oLIWm5CO9QwCmSmSBAFut0_Ug9Zi9KxuCKZFWdH40SvvFkeKh75vkop02DELt7ft_KK4KfDxrXPp43IXMhhRZGYbQHhFsjfbm9aM5DA9Z0VmkVSo0JeSKiMjh1UPm79QEfbdWB_FtN0t82j37qmrPIfVWTBOyRwR-125Tcb4QlUJWbQcJjK2XQvZI5VNREkTHEbJX_REmIFOV_q7-C8-oQ-1wq_glDvYGfr0JPU8vbMEK0hLe3u6iMgDRvGA9kAwQOZJUkA11k9GqTNFfCRa4tt4sdGNN1&isca=1"
+						className="sm:block hidden"
+					>
+						<p className="font-inter text-md sm:text-lg">Resume</p>
+					</a> */}
+					<a href="#contact" className="hidden sm:block">
 						<p className="font-inter text-md sm:text-lg">Contact</p>
 					</a>
 				</div>
@@ -188,14 +198,10 @@ function App() {
 				<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-b lg:border-b-0 border-black">
 					<h3 className="font-unbound lowercase font-medium text-xl">About me</h3>
 					<p className="font-inter pt-2 text-base">
-						I am a Staff Design Engineer on the Data Experience team at Visa. I specialize in the
-						visualization of complex data systems like AI and machine learning, payments and web3, and
-						patents and litigation.
+					I'm passionate about making complex systems feel simple and intuitive. Today, I lead an engineering team where we're building AI-powered tools revolutionizing player management. Before this, I designed and developed blockchain visualization installations, as well as led analytics projects at the intersection of technology and IP in San Francisco.
 					</p>
 					<p className="font-inter pt-2 text-base">
-						After several years working in San Francisco at the intersection of IP law and technology, I now
-						live in Miami and am focused on the data visualization and product design of AI/ML platforms and
-						blockchains.
+					With a mix of technical know-how and design thinking, I love tackling tough problems and turning them into user-friendly solutions. When I'm not nerding out over data viz and AI, you can find me enjoying the Miami sunshine and making (way too much) pottery.
 					</p>
 					<div className="flex flex-row gap-5">
 						<a href="https://www.linkedin.com/in/smodica" target="_blank" rel="noreferrer">
@@ -272,7 +278,7 @@ function App() {
 				</div>
 			</div>
 			<div className="border border-t-black py-4 px-6 sm:px-10 md:px-20">
-				<p className="font-inter text-md sm:text-base">© 2023, Stephanie Modica</p>
+				<p className="font-inter text-md sm:text-base">© {new Date().getFullYear()}, Stephanie Modica</p>
 			</div>
 		</div>
 	);
