@@ -171,7 +171,7 @@ function App() {
 					Engineer & Designer
 				</h2>
 				<h1 className="text-5xl md:text-header leading-none tracking-tighter font-unbound font-medium pb-4">
-					Specializing in the visualization of complex data systems
+					Transforming complex data into meaningful experiences
 				</h1>
 				<div className="flex flex-row py-10 md:py-20 justify-start items-center flex-wrap gap-5 sm:gap-10">
 					{cards.map((card, i) => (
@@ -198,10 +198,12 @@ function App() {
 				<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-b lg:border-b-0 border-black">
 					<h3 className="font-unbound lowercase font-medium text-xl">About me</h3>
 					<p className="font-inter pt-2 text-base">
-					I'm passionate about making complex systems feel simple and intuitive. Today, I lead an engineering team where we're building AI-powered tools revolutionizing player management. Before this, I designed and developed blockchain visualization installations, as well as led analytics projects at the intersection of technology and IP in San Francisco.
+					I combine engineering with design thinking to make complex systems accessible. Today, I'm leading the product and engineering teams at a 10+ person startup building an AI/ML-powered "Zillow for moneyball."
+					</p>
+					<p className="font-inter pt-2 text-base">Previously, I designed and developed 3D blockchain visualizations for Visa's global Innovation Centers and led analytics projects at the intersection of fintech and IP law in San Francisco.
 					</p>
 					<p className="font-inter pt-2 text-base">
-					With a mix of technical know-how and design thinking, I love tackling tough problems and turning them into user-friendly solutions. When I'm not nerding out over data viz and AI, you can find me enjoying the Miami sunshine and making (way too much) pottery.
+					When I'm not nerding out on my computer, you can find me outside enjoying the sunshine and making pottery.
 					</p>
 					<div className="flex flex-row gap-5">
 						<a href="https://www.linkedin.com/in/smodica" target="_blank" rel="noreferrer">
