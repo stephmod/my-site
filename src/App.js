@@ -200,7 +200,7 @@ function App() {
 					<p className="font-inter pt-2 text-base">
 					I fuse engineering and design to transform complex data systems into intuitive experiences. Currently, I lead product and engineering teams at a seed-stage startup, crafting an Al/ML-powered platform that's essentially "Zillow meets Moneyball."
 					</p>
-					<p className="font-inter pt-2 text-base">In the past, I brought cutting-edge 3D blockchain visualizations to life for Visa's global innovation hubs and spearheaded analytics projects that bridged technology and intellectual property law in San Francisco.
+					<p className="font-inter pt-2 text-base">In the past, I brought cutting-edge 3D blockchain visualizations to life for Visa's global innovation centers and spearheaded analytics projects that bridged technology and intellectual property law in San Francisco.
 					</p>
 					<p className="font-inter pt-2 text-base">
 					When I'm not deep in code or strategy, you'll find me soaking up the sun, experimenting with pottery, or chasing new creative adventures.
