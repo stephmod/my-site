@@ -171,7 +171,7 @@ function App() {
 					Engineer & Designer
 				</h2>
 				<h1 className="text-5xl md:text-header leading-none tracking-tighter font-unbound font-medium pb-4">
-					Transforming complex data into meaningful experiences
+					Transforming complex data systems into meaningful experiences
 				</h1>
 				<div className="flex flex-row py-10 md:py-20 justify-start items-center flex-wrap gap-5 sm:gap-10">
 					{cards.map((card, i) => (
