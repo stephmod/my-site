@@ -171,7 +171,7 @@ function App() {
 					Engineer & Designer
 				</h2>
 				<h1 className="text-5xl md:text-header leading-none tracking-tighter font-unbound font-medium pb-4">
-					Transforming complex data systems into meaningful experiences
+					Transforming complex data into meaningful experiences
 				</h1>
 				<div className="flex flex-row py-10 md:py-20 justify-start items-center flex-wrap gap-5 sm:gap-10">
 					{cards.map((card, i) => (
@@ -198,9 +198,10 @@ function App() {
 				<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-b lg:border-b-0 border-black">
 					<h3 className="font-unbound lowercase font-medium text-xl">About me</h3>
 					<p className="font-inter pt-2 text-base">
-					I fuse engineering and design to transform complex data systems into intuitive experiences. Currently, I lead product and engineering teams at a seed-stage startup, crafting an Al/ML-powered platform that's essentially "Zillow meets Moneyball."
+					I fuse engineering and design to transform complex data systems into intuitive experiences. Currently, I lead product and engineering at a seed-stage startup, crafting an AI/ML-powered mobile app that's like Zillow meets Coinbase for sports analytics - bringing Moneyball into the modern era.
 					</p>
-					<p className="font-inter pt-2 text-base">In the past, I brought cutting-edge 3D blockchain visualizations to life for Visa's global innovation centers and spearheaded analytics projects that bridged technology and intellectual property law in San Francisco.
+					<p className="font-inter pt-2 text-base">
+					Prior to my startup journey, I brought cutting-edge 3D blockchain visualizations to life for Visa's global innovation centers and spearheaded analytics projects that bridged technology and IP law in San Francisco.
 					</p>
 					<p className="font-inter pt-2 text-base">
 					When I'm not deep in code or strategy, you'll find me soaking up the sun, experimenting with pottery, or chasing new creative adventures.
