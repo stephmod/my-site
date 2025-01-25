@@ -198,12 +198,12 @@ function App() {
 				<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-b lg:border-b-0 border-black">
 					<h3 className="font-unbound lowercase font-medium text-xl">About me</h3>
 					<p className="font-inter pt-2 text-base">
-					I combine engineering with design thinking to make complex systems accessible. Today, I'm leading the product and engineering teams at a 10+ person startup building an AI/ML-powered "Zillow for moneyball."
+					I fuse engineering and design to transform complex data systems into intuitive experiences. Currently, I lead product and engineering teams at a seed-stage startup, crafting an Al/ML-powered platform that's essentially "Zillow meets Moneyball."
 					</p>
-					<p className="font-inter pt-2 text-base">Previously, I designed and developed 3D blockchain visualizations for Visa's global Innovation Centers and led analytics projects at the intersection of fintech and IP law in San Francisco.
+					<p className="font-inter pt-2 text-base">In the past, I brought cutting-edge 3D blockchain visualizations to life for Visa's global innovation hubs and spearheaded analytics projects that bridged technology and intellectual property law in San Francisco.
 					</p>
 					<p className="font-inter pt-2 text-base">
-					When I'm not nerding out on my computer, you can find me outside enjoying the sunshine and making pottery.
+					When I'm not deep in code or strategy, you'll find me soaking up the sun, experimenting with pottery, or chasing new creative adventures.
 					</p>
 					<div className="flex flex-row gap-5">
 						<a href="https://www.linkedin.com/in/smodica" target="_blank" rel="noreferrer">
