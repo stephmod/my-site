@@ -220,13 +220,15 @@ function AppV2() {
 						</a>
 					</div>
 				</div>
-				<div
-					className="min-h-[280px] h-[35vh] lg:h-screen lg:flex-1 overflow-visible"
-					style={isMobile ? { pointerEvents: 'none', touchAction: 'pan-y' } : {}}
-				>
-					<Canvas camera={{ position: [0, 0, isMobile ? 4 : 5], fov: 50 }}>
+				<div className="min-h-[280px] h-[35vh] lg:h-screen lg:flex-1 overflow-visible">
+					<Canvas
+						camera={{ position: [0, 0, isMobile ? 4 : 5], fov: 50 }}
+						style={isMobile ? { touchAction: 'pan-y' } : {}}
+					>
 						<NeuralMesh />
-						<OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.2} />
+						{!isMobile && (
+							<OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.2} />
+						)}
 					</Canvas>
 				</div>
 			</section>
