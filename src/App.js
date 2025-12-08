@@ -1,91 +1,16 @@
 import './App.css';
-import { Canvas, useFrame } from '@react-three/fiber';
-import {
-	OrbitControls,
-	RoundedBox,
-	Instance,
-	Instances,
-	Float,
-	MeshTransmissionMaterial,
-	MeshDistortMaterial,
-} from '@react-three/drei';
-import { useRef, useMemo } from 'react';
-import * as THREE from 'three';
+import { useRef, lazy, Suspense } from 'react';
 import querystring from 'querystring';
 import axios from 'axios';
 
-const Block = () => {
-	const data = useMemo(
-		() =>
-			Array.from({ length: 100 }, () => {
-				return {
-					size: THREE.MathUtils.randFloat(0.5, 3),
-					position: {
-						x: THREE.MathUtils.randFloat(-1.5, 1.5),
-						y: THREE.MathUtils.randFloat(-1.5, 1.5),
-						z: THREE.MathUtils.randFloat(-1.5, 1.5),
-					},
-				};
-			}),
-		[]
-	);
+const BlockScene = lazy(() => import('./Scene3D').then(module => ({ default: module.BlockScene })));
+const SphereScene = lazy(() => import('./Scene3D').then(module => ({ default: module.SphereScene })));
 
-	return (
-		<Float>
-			<pointLight args={[10, 10, 10]} color={'#eaeaea'} />
-			<mesh key={`block`} position={[0, 0, 0]}>
-				<RoundedBox args={[2.2, 2.2, 2.2]}>
-					<MeshTransmissionMaterial
-						transmission={1}
-						roughness={0.3}
-						thickness={1}
-						ior={2}
-						background={new THREE.Color('#fff')}
-					/>
-				</RoundedBox>
-			</mesh>
-			<Instances key={`spheres`}>
-				<sphereGeometry args={[0.1, 64, 64]} />
-				<meshStandardMaterial />
-				{data.map((d, i) => (
-					<Instance
-						key={`sphere_${i}`}
-						position={[d.position.x, d.position.y, d.position.z]}
-						color={'#000'}
-						scale={d.size}
-					/>
-				))}
-			</Instances>
-		</Float>
-	);
-};
-
-const Sphere = () => {
-	const sphere = useRef();
-
-	useFrame(() => {
-		sphere.current.rotation.y += 0.001;
-	});
-
-	return (
-		<group ref={sphere}>
-			<mesh key={`sphere`} position={[0, 0, 0]}>
-				<sphereGeometry args={[1.5, 64, 64]} />
-				<MeshTransmissionMaterial
-					transmission={1}
-					roughness={0.2}
-					thickness={1}
-					ior={3}
-					background={new THREE.Color('#fff')}
-				/>
-			</mesh>
-			<mesh key={`distorted_sphere`} position={[0, 0, 0]}>
-				<sphereGeometry args={[0.35, 64, 64]} />
-				<MeshDistortMaterial distort={1} color="#000" />
-			</mesh>
-		</group>
-	);
-};
+const SceneLoader = () => (
+	<div className="flex items-center justify-center h-full w-full">
+		<div className="animate-pulse text-zinc-400 font-inter">Loading 3D...</div>
+	</div>
+);
 
 function App() {
 	const name = useRef();
@@ -154,13 +79,6 @@ function App() {
 					<a href="https://www.figma.com/board/moYtwSNfqVwn9wE6QRANRq/Portfolio" target="_blank" rel="noreferrer">
 						<p className="font-inter text-md sm:text-lg">resume + portfolio</p>
 					</a>
-					{/* <a
-						target="_blank"
-						href="https://ff8add042b815782ca7c1565b2e65310e9c4ff4200f1abb3951503c-apidata.googleusercontent.com/download/storage/v1/b/dependable-aloe/o/smodica-resume-030923.pdf?jk=AahUMlsjrOS0JOfVSFss0S9gP8qZYp3tVl4TK5epKq9aJedApx3Wu1A308Pob8nwCNQSuVE55iddTON_GRLlRm-2onVc0iuFezDZWOCq2Xerqjegvl8wE-ffeBuBKZDRaeu3oaIIw4Cu_m29sB2tX2Q_etxx2mKNnWGNZOhUMWsDh1eU0AtPNT-2gDBjiETBSOR3RIfmyQZta3n3Y8gO-xSwUnie4PxZEvquQD6kwJ8IOyLJX0grha8mQq8qyu_e60JHLVUbxsD1zaT9f--3k2c_OaeM4ve3KNrQfGIm5I0Vpv3XpQMKb9_E-x4nwE2D1x--0d6LUqTGh0o69KeGrIqr0lkA_IdKaYY1InMrao1rDgGARknnmr4nlSU1f6jd5UnoOQc-R8wG7VVpnYyCnLxaPc2-rgi2HHkZ7dZ3qf6rq0TBuMQxTyOWI92DU3sVTsxdqdRTz-VdeUqc55l6SAlNZ5-zisvbfqMOl-dlS8CpDEH8Fh5dq0nMZyEIRFggybthNH4XaadOznd_0mTW5r83zWNt0mOmp2XDVXA-rPsMkcaZSDWH_096tLGVkMxex74Pb7Iww27DdLAMoagSLGSNXUT3DQvIyBE3BiypfHC_HpJwjZIiKM5NHM534er5awN2w2oIk2cDZ3tosNpJiY_4v08Pb0s_ss9F4ZDoN42rhk8G5qhNxTTER0Hrt0xX1D35tHK6n6AP-dy6xZfXX2P1Im6AU1oliJAL0u98AJmmY4gvvs_PW-la9dMRe6zro30GFZpMRFDx5QqwYDCI-D20ygwRppRh_P4-atg6ZbA5SIFi_K6cPEm4kELLTMY9F2Nj1WwXjr_8pPFefZNxDODvJDhZqgrYoGWvK5PYMbgxpKCf35Fa0QoacR0q6rWcqgIWZkEJ9XMqibsLNJ6OGEG0-oSwUrVmsrRO6cgVhNsXvplw21oLIWm5CO9QwCmSmSBAFut0_Ug9Zi9KxuCKZFWdH40SvvFkeKh75vkop02DELt7ft_KK4KfDxrXPp43IXMhhRZGYbQHhFsjfbm9aM5DA9Z0VmkVSo0JeSKiMjh1UPm79QEfbdWB_FtN0t82j37qmrPIfVWTBOyRwR-125Tcb4QlUJWbQcJjK2XQvZI5VNREkTHEbJX_REmIFOV_q7-C8-oQ-1wq_glDvYGfr0JPU8vbMEK0hLe3u6iMgDRvGA9kAwQOZJUkA11k9GqTNFfCRa4tt4sdGNN1&isca=1"
-						className="sm:block hidden"
-					>
-						<p className="font-inter text-md sm:text-lg">Resume</p>
-					</a> */}
 					<a href="#contact" className="hidden sm:block">
 						<p className="font-inter text-md sm:text-lg">Contact</p>
 					</a>
@@ -215,10 +133,9 @@ function App() {
 					</div>
 				</div>
 				<div className="bg-[#eaeaea] border-l border-black flex flex-col place-content-center sm:h-[95vh] h-[70vh]">
-					<Canvas camera={{ position: [-4, 4, 8], fov: 30 }}>
-						<OrbitControls enableZoom={false} />
-						<Block key={`block0`} />
-					</Canvas>
+					<Suspense fallback={<SceneLoader />}>
+						<BlockScene />
+					</Suspense>
 				</div>
 			</div>
 			<div className="flex flex-col place-content-center px-6 sm:px-20 min-h-[50vh] border-b border-t border-black">
@@ -231,20 +148,15 @@ function App() {
 			</div>
 			<div className="grid lg:grid-cols-2">
 				<div className="bg-[#eaeaea] border-r border-black flex flex-col place-content-center lg:h-[95vh] h-[70vh]">
-					<Canvas camera={{ position: [-4, 4, 8], fov: 30 }}>
-						<OrbitControls enableZoom={false} />
-						<Sphere key={`sphere0`} />
-					</Canvas>
+					<Suspense fallback={<SceneLoader />}>
+						<SphereScene />
+					</Suspense>
 				</div>
 				<div
 					id="contact"
 					className="flex flex-col place-content-center px-6 sm:px-20 min-h-[70vh] lg:min-h-[95vh] border-t lg:border-t-0 border-black scroll-mt-10"
 				>
 					<h3 className="font-unbound lowercase font-medium text-xl">Contact me</h3>
-					{/* <p className="font-inter pt-2 text-base">
-						I'd love to hear from you. Have a cool idea you want my help with? I'm always interested in
-						learning about new and exciting projects.
-					</p> */}
 					<form name="contact" className="flex flex-col" onSubmit={handleSubmit}>
 						<input
 							placeholder="Your name"

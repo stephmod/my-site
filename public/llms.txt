@@ -1,0 +1,46 @@
+# Stephanie Modica
+
+## Who I Am
+Stephanie Modica is a Product & Technology Leader based in Miami, Florida (formerly San Francisco). She is a startup CPTO with enterprise experience, specializing in AI-powered systems and product development.
+
+## What I Do
+- Build AI products and lead teams that ship
+- Transform workflows into AI-powered systems
+- Advise early-stage founders on AI product development
+- Design and ship agentic AI systems
+
+## Background
+- Chief Product & Technology Officer at an AI startup (2022-2025)
+- Staff Design Engineer at Visa (2021-2023)
+- Senior Manager, Analytics at a Legal Fintech company (2016-2021)
+- Harvard University - Graduate Certificate in Data Science
+- University of Miami - MBA (magna cum laude)
+- University of Miami - BS in Business Law and Art History (cum laude)
+
+## Expertise
+- AI/ML product development
+- Agentic AI systems and MCP (Model Context Protocol)
+- Product leadership and engineering management
+- Design systems and data visualization
+- Full-stack product development (design, engineering, data)
+
+## Key Achievements
+- $13M revenue generated from a single data analysis
+- 70% cost reduction through design-led innovation
+- Led 10+ engineers and data scientists across 4 time zones
+- Built AI systems with MCP architecture before it was mainstream
+- Created Visa's first data-driven design analytics function
+- Shipped blockchain visualizations to Visa Innovation Centers globally
+
+## Philosophy
+- Code is becoming a commodity with AI; what matters now is taste, judgment, and systems thinking
+- Prefers building things that actually get used over impressive demos
+- Gravitates toward hard problems, curious people, and useful products
+
+## Contact
+- Email: modica.steph@gmail.com
+- LinkedIn: https://www.linkedin.com/in/smodica
+- Website: https://stephaniemodica.xyz
+
+## Location
+Miami, Florida, USA (formerly San Francisco)

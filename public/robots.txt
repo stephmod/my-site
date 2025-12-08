@@ -1,3 +1,23 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for stephaniemodica.xyz
+
 User-agent: *
-Disallow:
+Allow: /
+
+# LLMs and AI crawlers welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# LLMs context file
+# See: https://stephaniemodica.xyz/llms.txt
