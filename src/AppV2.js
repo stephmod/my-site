@@ -220,7 +220,7 @@ function AppV2() {
 						</a>
 					</div>
 				</div>
-				<div className="min-h-[280px] h-[35vh] lg:h-screen lg:flex-1 overflow-visible">
+				<div className={`min-h-[280px] h-[35vh] lg:h-screen lg:flex-1 overflow-visible ${isMobile ? 'pointer-events-none' : ''}`}>
 					<Canvas camera={{ position: [0, 0, isMobile ? 4 : 5], fov: 50 }}>
 						<NeuralMesh />
 						<OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.2} />
