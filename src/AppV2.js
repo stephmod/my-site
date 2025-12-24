@@ -132,7 +132,7 @@ function AppV2() {
 	}, []);
 
 	const stats = [
-		{ value: '$13M', label: 'Revenue from a single analysis' },
+		{ value: '$13M', label: 'Revenue generated from data analysis' },
 		{ value: '70%', label: 'Cost reduction through design-led innovation' },
 		{ value: '10+', label: 'Engineers and data scientists led' },
 		{ value: '4', label: 'Time zones managed simultaneously' },
