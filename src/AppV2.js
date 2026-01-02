@@ -312,6 +312,14 @@ function AppV2() {
 					>
 						LinkedIn →
 					</a>
+					<a
+						href="https://www.figma.com/board/moYtwSNfqVwn9wE6QRANRq/Portfolio"
+						target="_blank"
+						rel="noreferrer"
+						className="font-inter text-sm text-gray-400 hover:text-white transition-colors"
+					>
+						Portfolio →
+					</a>
 				</div>
 			</section>
 
