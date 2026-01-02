@@ -11,7 +11,7 @@ const SceneLoader = () => (
 function AppV2() {
 
 	const stats = [
-		{ value: '$13M', label: 'Revenue generated from data analysis' },
+		{ value: '$13M', label: 'Capital unlocked through data analysis' },
 		{ value: '70%', label: 'Cost reduction through design-led innovation' },
 		{ value: '10+', label: 'Engineers and data scientists led' },
 		{ value: '4', label: 'Time zones managed simultaneously' },
@@ -27,7 +27,7 @@ function AppV2() {
 			],
 			year: '2022–2025',
 			description:
-				'Scaled a seed-stage AI startup from zero to production. Led a distributed team of 10+ engineers and data scientists across 4 time zones. Shipped agentic AI systems with MCP architecture—before it was mainstream.',
+				'Scaled a seed-stage AI/ML startup from zero to production. Led a distributed team of 10+ engineers and data scientists across 4 time zones. Shipped agentic AI systems with MCP architecture, before it was mainstream.',
 		},
 		{
 			company: 'Visa',
@@ -47,7 +47,7 @@ function AppV2() {
 			],
 			year: '2016–2021',
 			description:
-				'Designed and launched Clarity, a custom analytics platform serving 50+ enterprise clients. Built scalable workflows that transformed complex patent analysis into actionable intelligence for legal and investment teams.',
+				'Designed and launched RPX Clarity, a custom analytics platform serving 50+ enterprise clients. Built scalable workflows that transformed complex patent analysis into actionable intelligence for legal and investment teams.',
 		},
 	];
 
@@ -92,7 +92,7 @@ function AppV2() {
 						I build products and teams that ship.
 					</h1>
 					<p className="font-inter text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed">
-						Startup CPTO with enterprise experience. Transforming workflows into AI-powered systems.
+						Startup CPTO with enterprise experience. Transforming complex workflows into intuitive solutions.
 					</p>
 					<div className="flex gap-4 mt-10">
 						<a
@@ -177,7 +177,7 @@ function AppV2() {
 							With AI making code abundant, what matters most is taste, judgment, and perspective. Choosing the right problem and shaping how the solution should feel. That's where I do my best work.
 						</p>
 						<p>
-							Now in Miami after years in San Francisco. Same drive, more sun.
+							Now in Miami after years in San Francisco.
 						</p>
 						<div className="flex flex-wrap gap-2 pt-2">
 							{['MBA', 'Engineering', 'Design', 'Data', 'AI', 'Product', 'Leadership'].map((chip) => (
